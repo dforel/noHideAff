@@ -1,19 +1,25 @@
 { 
 	"manifest_version": 2, 
-	"name": "NoAff", 
-	"version": "0.0.3", 
+	"name": "NoHideAff", 
+	"version": "0.0.4", 
 	"description": "自动拦截隐藏AFF-星河vps资讯-xhvps.info", 
 	"icons":
 	{
-		"16": "img/icon.png",
-		"48": "img/icon.png",
-		"128": "img/icon.png"
+		"16": "img/icon96.png",
+		"48": "img/icon96.png",
+		"128": "img/icon96.png"
 	},
 	"browser_action": {
-		"default_icon": "img/icon.png", 
-		"default_title": "自动拦截隐藏AFF V0.0.3版本",      
-		"default_popup": "popup.html"       
+		"default_icon": "img/icon96.png", 
+		"default_title": "自动拦截隐藏AFF V0.0.4 版本",      
+		"default_popup": "html/popup.html"       
 	},
+	"options_ui": {
+		"page": "/html/config.html",
+		"open_in_tab": true
+	},
+	"options_page": "/html/config.html",
+
     "permissions":
     [ 
 		"notifications",

@@ -47,8 +47,19 @@ $(function(){
 	$("#clearAffCookiess").click(function(e){ 
 		 clear();
 	}); 
+
+	$('#goLinkConfig').click(function (e) {
+		
+		goLinkConfig();
+	})
  
 });
+
+
+function goLinkConfig(){
+	var url = chrome.extension.getURL('html/config.html');
+	chrome.tabs.create({url});
+}
 
 
 
