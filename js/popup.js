@@ -2,16 +2,28 @@
 var isInterceptAff; 
 var isNotifyAff;
 var customRegFilterText;
+var lastInterceptAffURL;
 
 $(function(){
-	// 初始化时候设置是否拒绝aff 
+	// 初始化时候设置是否拒绝aff，是否提醒
 	chrome.storage.sync.get({isInterceptAff: true,isNotifyAff: true,lastInterceptAffURL:"" , customRegFilterText: ""}, function(items) {  
-		console.log(items);
-		$("#isInterceptAff").attr("checked", items.isInterceptAff); 
-		$("#isNotifyAff").attr("checked", items.isNotifyAff);  
-		$("#lastInterceptAffURL").val(items.lastInterceptAffURL); 
-		$("#customRegFilter").val(items.customRegFilterText); 
+		console.log(items); 
+		lastInterceptAffURL =  items.lastInterceptAffURL; 
+		// $("#customRegFilter").val(items.customRegFilterText); 
+
+		initSwitch('#isNotifyAff',items.isNotifyAff,function(event,state){
+            chrome.storage.sync.set({isNotifyAff: state}, function() {
+                console.log('保存isInterceptAff成功！');
+            });
+          });
+        initSwitch('#isInterceptAff',items.isInterceptAff,function(event,state){ 
+            // 保存数据
+            chrome.storage.sync.set({isInterceptAff: state}, function() {
+                console.log('保存isInterceptAff成功！');
+            }); 
+		}); 
 		
+
 	});
 	
 	
@@ -52,6 +64,10 @@ $(function(){
 		
 		goLinkConfig();
 	})
+
+	$('#fastCopy').click(function (e) { 
+		write_Clipper(lastInterceptAffURL); 	
+	})
  
 });
 
@@ -60,8 +76,7 @@ function goLinkConfig(){
 	var url = chrome.extension.getURL('html/config.html');
 	chrome.tabs.create({url});
 }
-
-
+ 
 
 function clear(){
 	(function(){

@@ -1,6 +1,6 @@
 var webRuleRegClass={
     map:{
-        // "webUrl":["ruleList"],
+        // "webUrl":[{"reg":"","isNotify":true,"isIntercept":true}],
     },
     array:[
     //     {
@@ -25,6 +25,7 @@ var webRuleRegClass={
         }
         return null;
     },
+
     addRule:function(url,reg,isNotify,isIntercept){
         if(url==''){
 			alert("url不能空");
@@ -69,6 +70,28 @@ var webRuleRegClass={
         // console.log(this.array);
         this.storage();
     },
+    combine:function(newRuleList){
+        for( var rule of newRuleList)
+        { 
+            if( this.haveRule(rule.url,rule.reg) ){
+                continue;
+            }
+            this.addRule(rule.url,rule.reg,rule.isNotify,rule.isIntercept) 
+        }
+    },
+    haveRule:function(compareUrl,compareReg){
+        if(this.map.hasOwnProperty(compareUrl)){
+            regList = this.map[compareUrl];
+            for (let index = 0; index < regList.length; index++) {
+                const regItem = regList[index];
+                if(regItem.reg == compareReg){
+                    return true;
+                } 
+            }
+        }
+        return false;
+    },
+
     storage:function () { 
         this.text= JSON.stringify( this.array );
         chrome.storage.sync.set({webRuleRegStorage: this.text}, function() {

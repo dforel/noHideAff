@@ -79,6 +79,23 @@ $(function(){
         webRuleRegToTable();
 
     });
+
+    $("#requestRule").click(function (e) {
+        $.ajax({
+            method: 'get',
+            url: "https://xhvps.info/tool/ruleList.json",
+            success: (res) => {
+                //  console.log(res);
+                webRuleRegClass.combine(res); 
+                webRuleRegToTable();  
+            },
+            error: (e) => {
+                alert("拉取规则失败");
+                console.error('Failed to request rule list', e);
+            },
+        });
+ 
+    });
  
     initSwitch('#newIsNotify',true,function (event,state) {
         newIsNotify = state; 
@@ -114,15 +131,4 @@ $(function(){
 	
 	
     
-});
-
-function initSwitch(id,state,change) {
-    $(id).bootstrapSwitch({    //初始化按钮 是否拦截
-        state:state,
-        onText:"是",
-        offText:"否",
-        onColor:"success",
-        offColor:"info",
-        onSwitchChange:change
-     }); 
-}
+}); 
