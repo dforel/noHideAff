@@ -5,7 +5,7 @@
 
 ### 预览
 
-请去https://xhvps.info/index.php/archives/noaff.html查看预览！
+请去`https://xhvps.info/index.php/archives/noaff.html`查看预览！【[链接][6]】
 
 ### 当前版本
 0.0.4
@@ -29,3 +29,4 @@ google-CRF下载：
   [3]: https://xhvps.info/usr/uploads/2020/02/3458698295.png
   [4]: https://xhvps.info/tool/no-hide-aff.zip
   [5]: https://xhvps.info/tool/no-hide-aff-0.0.4.crx
+  [6]: https://xhvps.info/index.php/archives/noaff.html
