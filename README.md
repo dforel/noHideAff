@@ -6,25 +6,26 @@
 
 ### 预览图
 
-![1280_800.png][1]
+
 
 ### 当前版本
-0.0.3
+0.0.4
 
 ### 最新版本改动
 
-增加自定义过滤条件
-![最新版本增加自定义正则过滤.png][2]
-![自定义拦截词语拦截阿里][3]
+1、增加自定义网站过滤
 
 ### 下载
 [下载插件-源码][4]
 
-google地址【谷歌最新版正在审核中。请稍后】：
-https://chrome.google.com/webstore/detail/noaff/abmbljajkipbpdlnifbabdogfkahnbja?hl=zh-CN&gl=US
+google地址：
+https://chrome.google.com/webstore/detail/nohideaff/nddgmjaijllhjmcbnpdlbbjhpdkjngjl?hl=zh-CN
 
+google-CRF下载：
+[下载插件-CRF][5]
 
   [1]: https://xhvps.info/usr/uploads/2020/01/3342529812.png
   [2]: https://xhvps.info/usr/uploads/2020/01/1136645772.png
   [3]: https://xhvps.info/usr/uploads/2020/01/1799488743.png
   [4]: https://xhvps.info/tool/no-hide-aff.zip
+  [5]: https://xhvps.info/tool/no-hide-aff-0.0.4.crx

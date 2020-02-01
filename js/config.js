@@ -115,6 +115,7 @@ $(function(){
             webRuleRegToTable();
         }
         
+        $("#customRegFilter").val(items.customRegFilterText); 
         
         initSwitch('#isNotifyAff',items.isNotifyAff,function(event,state){
             chrome.storage.sync.set({isNotifyAff: state}, function() {
@@ -129,6 +130,14 @@ $(function(){
         }); 
 	});
 	
-	
+	$("#customRegFilter").change(function(e){
+		console.log($(this).val());
+		customRegFilterText = $(this).val();
+		
+		// 保存数据
+		chrome.storage.sync.set({customRegFilterText: customRegFilterText}, function() {
+			console.log('保存customRegFilterText成功！');
+		});
+	}); 
     
 }); 

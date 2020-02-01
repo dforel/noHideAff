@@ -219,8 +219,7 @@ chrome.webRequest.onBeforeRequest.addListener(details => {
 	}
 	
 	if(isInterceptAff && blockResult.isIntercept ){ 
-		// cancel 表示取消本次请求
-		
+		// cancel 表示取消本次请求 
 		// 保存数据
 		chrome.storage.sync.set({lastInterceptAffURL: details.url}, function() {
 			// console.log('保存lastInterceptAffURL成功！');

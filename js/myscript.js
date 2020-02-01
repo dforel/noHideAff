@@ -6,5 +6,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 	{ 
 		console.log('%c '+request.value,'color:#bada55;font-size: 25px;');
 	}
-    // sendResponse('我收到了你的消息！');
+	sendResponse('我收到了你的消息！');
+	return true;
 });

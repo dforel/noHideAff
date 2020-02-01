@@ -2,7 +2,7 @@
 	"manifest_version": 2, 
 	"name": "NoHideAff", 
 	"version": "0.0.4", 
-	"description": "自动拦截隐藏AFF-星河vps资讯-xhvps.info", 
+	"description": "自动拦截隐藏AFF", 
 	"icons":
 	{
 		"16": "img/icon96.png",
@@ -27,7 +27,8 @@
         "webRequestBlocking", 
         "storage", 
         "http://*/*", 
-        "https://*/*" 
+		"https://*/*",  
+		"activeTab"
     ],
 	"background":
 	{
