@@ -1,4 +1,3 @@
-
 ### 前言
 发现hostloc居然还有人用我的这个工具，于是翻出来放到新的博客上去吧，老的博客随着以前主机的过期，已经找不回来了。。
 
@@ -6,7 +5,9 @@
 
 ### 预览图
 
-
+![屏幕截图-640x400.png][1]
+![屏幕截图-1280x800.png][2]
+![屏幕截图-1280x800-2.png][3]
 
 ### 当前版本
 0.0.4
@@ -24,8 +25,9 @@ https://chrome.google.com/webstore/detail/nohideaff/nddgmjaijllhjmcbnpdlbbjhpdkj
 google-CRF下载：
 [下载插件-CRF][5]
 
-  [1]: https://xhvps.info/usr/uploads/2020/01/3342529812.png
-  [2]: https://xhvps.info/usr/uploads/2020/01/1136645772.png
-  [3]: https://xhvps.info/usr/uploads/2020/01/1799488743.png
+
+  [1]: https://xhvps.info/usr/uploads/2020/02/3537354325.png
+  [2]: https://xhvps.info/usr/uploads/2020/02/1437373454.png
+  [3]: https://xhvps.info/usr/uploads/2020/02/3458698295.png
   [4]: https://xhvps.info/tool/no-hide-aff.zip
   [5]: https://xhvps.info/tool/no-hide-aff-0.0.4.crx
